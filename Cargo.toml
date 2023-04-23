@@ -1,0 +1,17 @@
+[package]
+name = "archival-dedupe"
+version = "1.0.0"
+edition = "2021"
+authors = ["Solra Bizna <solra@bizna.name>"]
+description = "Deduplicate read-only files on a UNIX filesystem"
+readme = "README.md"
+homepage = "https://github.com/SolraBizna/archival-dedupe"
+
+[dependencies]
+clap = {version = "4.2.4", features = ["derive", "wrap_help"]}
+crossbeam-channel = "0.5.8"
+libc = "*"
+liso = "1.0.2"
+lsx = {version = "1.1.2", default-features=false, features=["sha256"]}
+nix = {version = "0.26.2", features = ["ioctl"]}
+num_cpus = "1.15"
